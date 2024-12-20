@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Calculator</title>
+    <link rel="icon" href="cal.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator" id="calculator">
+	<div class="drag-header" id="dragHeader">
+            <span>Prag's Calculator</span>
+        </div>
+        <div class="display">
+            <input type="text" id="calcDisplay" readonly>
+        </div>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">
+        	<i class="fas fa-backspace"></i>
+    	    </button>
+            <button onclick="appendValue('%')">%</button>
+            <button onclick="appendValue('/')">/</button>
+
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('*')">*</button>
+
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('-')">-</button>
+
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('+')">+</button>
+
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="calculateAdvanced('sqrt')">√</button>
+
+            <button onclick="calculateAdvanced('square')">x²</button>
+            <button onclick="calculateAdvanced('cube')">x³</button>
+            <button onclick="calculateAdvanced('cbrt')">∛</button>
+            <button onclick="calculateAdvanced('log')">log</button>
+
+            <button onclick="calculateAdvanced('pow')">xʸ</button>
+            <button onclick="calculateAdvanced('theta')">θ</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
